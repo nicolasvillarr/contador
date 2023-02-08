@@ -1,38 +1,40 @@
 .App {
   text-align: center;
+  margin: 10%;
+  border:3px solid #77777752;
+  padding: 10% 20% 10% 20%;
+  border-radius: 6px;
+  color :#b84646;
+  /* background-color: #282c34; */
+  backdrop-filter:blur(10px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contador {
+  margin: 20px;
+  border-radius: 6px;
+  background-color: rgba(14, 137, 219, 0.349);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contP{
+  border-radius: 6px;
+  background-color: hwb(162% 54 0);
+  color: white;
+}
+.contC{
+  border-radius: 6px;  
+  background-color: hsla(157, 64%, 6%, 0.349);
+  color:white
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url(  https://img.freepik.com/foto-gratis/telon-fondo-textura-papel-arrugado_53876-104621.jpg?w=3740&t=st=1675815564~exp=1675816164~hmac=76ff2d14272b70c1a43b3f0679cb15134fb27799e361cf70e081f8043ea8358c);
+
+  /* background-image: url(https://img.freepik.com/foto-gratis/tono-blanco-espacio-diseno-fondo-textura-papel-arrugado-blanco_1258-78696.jpg?w=5000); */
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-color: #3971e0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* font-size: calc(10px + 2vmin); */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

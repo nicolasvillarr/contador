@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Button, ButtonGroup } from 'reactstrap';
+import { useState, useEffect } from 'react';
 function App() {
+
+  const [contador, setContador] = useState(0)
+
+    useEffect(()=>{
+      document.title = `${contador}`;
+    })
   return (
+    <header className='App-header'>
+      
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ButtonGroup>
+        <Button onClick={()=> setContador(contador - 1)}>
+          -
+        </Button>
+        <Button onClick={()=> setContador(0)}>
+        REINICIAR
+        </Button>
+        <Button onClick={()=> setContador(contador + 1)}>
+          +
+        </Button>
+      </ButtonGroup>
+        <div className='contador'>{ contador !== 0 ? 
+          <div className='contP'>Contador: {contador}</div> : 
+        <div className='contC'>Contador: 0</div>}
+      </div>
     </div>
+    </header>
   );
 }
-
+ 
 export default App;
